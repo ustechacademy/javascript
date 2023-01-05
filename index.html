@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basics</title>
+    <style>
+        body {
+            background-color: grey;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Javascript Arithmetic</h1>
+    <p id="demo"></p>
+
+
+    <script>
+        // dogru kod tip
+        let x = 5;
+        let y = 2;
+        let z = x * y;
+
+        document.getElementById("demo").innerHTML = z;
+
+        // alert("Hello Javascript" + z);
+        /* Comment */
+        let num1;
+
+        //num1 = prompt("Input a number");
+        //document.getElementById("demo").innerHTML = num1;
+
+        //Assignment operators
+
+        // =
+        // +=
+        let x1 = 10;
+        let z2 = x1 += 5; // x1 = x1 + 5;
+        document.getElementById("demo").innerHTML = z2;
+        // -=
+        let y1 = 20;
+        let yz = y1 -= 4; // y1 = y1 - 4;
+        document.getElementById("demo").innerHTML = yz;
+
+        // *=
+        let z1 = 25;
+        let res = z1 *= 2; // z1 = z1 * 2;
+        document.getElementById("demo").innerHTML = res;
+        // **=
+        let xz = 4;
+        let result = xz **= 5; // üslü sayilar
+        document.getElementById("demo").innerHTML = result;
+
+        // /=
+        let yz1 = 10;
+        let res1 = yz1 /= 5; // yz1 = yz1 / 5;
+        document.getElementById("demo").innerHTML = res1;
+
+        // Comparison operators
+        let a1 = 5, b1 = 10;
+        // < >
+        console.log(a1 < b1);
+        // ==
+        console.log(a1 == b1);
+        console.log("== " + (a1 == '5'));
+        // !=
+        console.log(a1 != 5);
+        // ===  (Strict operators)
+        console.log("=== " + (a1 === b1));
+        console.log("=== " + (a1 === '5'));
+
+        // !== (Strict)
+        console.log("!== " + (a1 !== b1));
+
+        console.log("!== " + (a1 !== '5'));
+
+        //logical operators
+        // && -> And ,  || -> Or , ! -> Not
+
+
+        let n = 5, m = 3;
+        console.log((n < 6) && (m < 5));
+
+        // true && true = true
+
+        console.log(true && false); // false
+
+        console.log((n > 10) || (m > 5));
+        // false || false = false
+
+        console.log(!false);
+
+        //Conditional Statements
+        // if, else if, else
+        let age = 18;
+
+        if (age >= 18) {
+            console.log("Mekana giris yapabilirsiniz.");
+        }
+        else {
+            console.log("Giremezsiniz");
+        }
+
+        // Accept 2 numbers from user with prompt
+        // Larger one will be written console
+/*
+        let firstNumber = prompt("First Number");
+        let secondNumber = prompt("Second Number");
+        if (firstNumber > secondNumber) {
+            console.log(firstNumber);
+        } else if (firstNumber == secondNumber) {
+            console.log('Both equal');
+        } else {
+            console.log(secondNumber);
+        }
+*/
+/*      age1 = prompt("Input first number");
+        age2 = prompt("Input second number");
+        if(age1 >= 18 && age2 >= 18){
+            console.log("Gel kardeşim ");
+        }
+        else if(age1 < 18 && age2 < 18) {
+            console.log("Polisi ara");
+        }
+        else{
+        console.log("Tamam hadi geçin")
+        }
+*/
+/*
+        let j,k;
+        j = prompt("a"); // 10
+        k = prompt("a"); // 2
+        if(j>k){
+            console.log(j +">"+k);
+        }
+        else if(j==k){
+            console.log(j +"="+k);
+        }
+        else{
+            console.log(k +"<"+j);
+        }
+*/
+/*
+        let not1 = prompt("ilk sınav notunuzu giriniz");
+        let not2 = prompt("ikinci sınav notunuzu giriniz");
+        if ( ((not1 + not2)) == 100/2 ) {
+            console.log('hadi ucuz yırttın')
+        }
+        else if ((not1 + not2 ) > 50 ) {
+            console.log('başarılı')
+        }
+        else if ((not1 + not2) < 50 ) {
+            console.log('hacı mezuna kaldın. geçmiş olsuuuun')
+        }
+*/
+/*
+let A=prompt("1.sayıyı gir");
+let B=prompt("2.sayıyı gir");
+if (A>B){
+    console.log(A);
+}
+else if (A==B){
+    console.log("EŞİT");
+}
+else{
+    console.log(B);
+}*/
+         let number1, number2;
+
+         number1 = prompt("Ilk sayi");
+         number2 = prompt("ikinci sayi");
+        if(number1 > number2){
+            console.log(number1);
+        }else if (number1 == number2){
+            console.log("bunlar esit");
+        }else{
+            console.log(number2);
+        }
+
+    </script>
+
+    
+</body>
+
+</html>
