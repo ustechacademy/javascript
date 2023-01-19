@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <h1>Error Handling</h1>
+    <p> Please input a number between 2 - 8</p>
+    <input id="number" type="text" />
+    <button type="button" onclick="testData()">Test Data</button>
+    <p id="error"></p>
+
+    <script>
+        /*
+        try{
+           // run code
+           adddalert("Error");
+           alert("Error");
+        }
+        catch(error){
+            // error
+            console.log(error.message);
+            document.getElementById("error").innerHTML = error.message;
+        }
+        finally{
+            alert("Error Finally");
+        }*/
+        function testData(){
+            let errorMessage = document.getElementById("error");
+                errorMessage.innerHTML = "";
+            let msg = document.getElementById("number").value;   
+            try{
+                if(msg.trim() == ""){
+                    console.log("Empty");
+                    throw "Please input a number";
+                }
+                if(isNaN(msg)){
+                    console.log("Not a number");
+                    throw "Not a number";
+                }
+                let inputNumber = Number(msg);
+                if(inputNumber < 2){
+                    console.log("Only between 2 & 8");
+                    throw "Only between 2 & 8";
+                }
+                if(inputNumber > 8){
+                    console.log("Only between 2 & 8");
+                    throw "Only between 2 & 8";
+                }
+            }
+            catch(error){
+                console.log(error);
+                errorMessage.innerHTML = error;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
