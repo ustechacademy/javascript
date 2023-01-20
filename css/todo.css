@@ -7,3 +7,30 @@ html, body{
 .container{
     width: 400px;
 }
+
+#inputField{
+    width: 350px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 25px;
+    color: blue;
+}
+
+#addToDo{
+    width: 180px;
+    height: 80px;
+    border: 1px solid black;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+#toDoContainer{
+    margin-top: 25px;
+}
+
+.paragraph-styling{
+    font-size: 20px;
+    color: brown;
+}
