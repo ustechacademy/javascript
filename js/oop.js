@@ -7,6 +7,7 @@ const country = {
     }
 }
 
+
 console.log(country.name); // Nokta notasyonu
 console.log(country["name"]); // Array notasyonu
 
@@ -44,3 +45,70 @@ const job3 =  new Job(
     "link3",
     false
 )
+
+class Car{
+    constructor(color,brand,year,price,range){
+        this.color = color; // sol taraf prop - sag taraf value
+        this.brand = brand;
+        this.year = year; 
+        this.price = price;
+        this.range = range;
+    }
+
+    start(){
+        return this.brand + " Car started!";
+    }
+
+    stop(){
+        return "Car stopped!";
+    }
+}
+
+const bmw = new Car("Black","Bmw",1990,50000,150000);
+
+console.log(bmw.start());
+console.log(bmw.stop());
+
+// Getters ve Setters
+
+class Client{
+    constructor(name,age,tc){
+        this._name = name;
+        this._age = age;
+        this._tc = tc;
+    }
+
+    static clientCount = 0;
+
+    static increaseClientCount(){
+        this.clientCount++;
+    }
+
+    get tc(){
+        if(userType === "Lawyer"){
+            return this._tc;
+        } else{
+            return "You are not allowed";
+        }
+    }
+
+    set tc(newTc){
+        if(userType === "Lawyer"){
+            this._tc = newTc;
+        } else{
+            console.log("You are not allowed");
+        }
+    }
+}
+
+let userType = "Lawyer";
+const person = new Client("John",45, 1256);
+person.tc = 1902;
+
+console.log(person.clientCount);
+console.log(Client.clientCount);
+
+
+
+
+
