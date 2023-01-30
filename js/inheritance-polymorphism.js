@@ -8,7 +8,7 @@
        value of "Shape"
     2. Add a method to "Shape" called "describe" that
        will console log out the following to the console:
-       "A ${this.colour} ${this.type}"
+       `A ${this.colour} ${this.type}`
 
        // Shape class -> - colour = "Transparent", type, describe
 
@@ -49,3 +49,75 @@
        // A blue square
        // A red rectangle
 */
+
+
+class Shape{
+   type = "Shape";
+   constructor(colour = "Transparent"){
+      this.colour = colour;
+      //this.type = "Shape";
+   }
+
+   describe(){
+      //console.log(`A ${this.colour} ${this.type}`);
+      return "Describe from shape class";
+      //console.log("A " + this.colour + " " + this.type);
+   }
+}
+
+class Square extends Shape{
+   type = "Square";
+   constructor(colour,sideLength){
+      super(colour);
+      this.sideLength = sideLength;
+   }
+
+   area(){
+      return this.sideLength ** 2;
+   }
+}
+
+class Rectangle extends Shape{
+   type = "Rectangle";
+   radius;
+   constructor(colour,width,height){
+      super(colour);
+      this.width = width;
+      this.height = height;
+   }
+
+   area(){
+      return this.describe();
+      //return this.width * this.height + this.colour;
+   }
+}
+
+const square = new Square("blue", 5);       
+const rectangle = new Rectangle("red", 5, 6);
+
+console.log(square.type);
+
+console.log(rectangle.radius);
+
+rectangle.radius = rectangle.width * rectangle.height;
+
+console.log(rectangle.radius);
+
+rectangle.describe();
+
+square.describe();
+
+const shape = new Shape("Black");
+
+console.log(shape);
+
+const shape2 = new Shape();
+
+console.log(shape2);
+
+
+console.log(rectangle.area());
+
+console.log(square.area());
+
+console.log(typeof rectangle);
