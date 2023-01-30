@@ -23,7 +23,7 @@ const job1 = {
     isRemote: false
 }
 
-class Job{
+class Job1{
     constructor(role,salary,applicationLink,isRemote){
         this.role = role;
         this.salary = salary;
@@ -32,14 +32,14 @@ class Job{
     }
 }
 
-const job2 = new Job(
+const job2 = new Job1(
     "Software Engineer",
     200000,
     "link2",
     true
 )
 
-const job3 =  new Job(
+const job3 =  new Job1(
     "Designer",
     1900000,
     "link3",
@@ -301,3 +301,93 @@ console.log(p.getName());
 console.log(p.name);
 p.age = -200;
 console.log(p.age);
+
+
+
+class Employee{
+    constructor(firstName,lastName,job){
+        this._firstname = firstName;
+        this._lastName =lastName;
+        this.skills =[];
+        this.job = job;
+        Employee._count++;
+    }
+
+    static _count = 0;
+
+    learn(skill){
+        this.skills.push(skill);
+    }
+
+
+}
+
+class Job{
+    constructor(company,position,salary){
+        this._company = company;
+        this._position = position;
+        this._salary = salary;
+    }
+}
+
+class Employer{
+    constructor(job){
+        this.job = job;
+    }
+}
+
+
+const job_1 = new Job("Ustech","Developer",100);
+const john = new Employee("John","Gr",job_1);
+const micheal = new Employee("Micheal","Gr",job_1);
+
+console.log(john);
+console.log(micheal);
+john.learn("Oop programming");
+
+console.log(Employee._count);
+
+// Void -> return olmayan fonksiyon/methodlar
+
+
+// Polymorphism - Cok sekilcilik
+// Super - Parent
+class Animals{
+    constructor(name,surname){
+        this.name = name;
+        this.surname = surname;
+    }
+    speak(){
+        console.log("Animals have different sounds.");
+    }
+}
+
+class Cats extends Animals {
+    constructor(name,surname,cardno){
+        super(name,surname);
+        this.cardno = cardno;
+    }
+
+    speak(){
+        console.log("Cat says Meow meow..");
+    }
+}
+
+class Dogs extends Animals{
+    speak(){
+        console.log("Dog says hav hav");
+    }
+}
+
+
+let cat1 = new Cats("Mavis","Mavisoglu",200);
+
+cat1.speak();
+
+let dog1 = new Dogs();
+
+dog1.speak();
+
+console.log(cat1.name);
+
+console.log(cat1.cardno);
